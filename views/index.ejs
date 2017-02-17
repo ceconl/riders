@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Students and their rider numbers
+
+  <ul class="students">
+  <% for(var i=0; i<students.length; i++) {%>
+    <li class="student">
+      <span><%= students[i].firstName %></span>
+      <span><%= students[i].lastName %></span>
+      <span><%= students[i].riderNumber %></span>
+    </li>
+  <% } %>
+</ul>
+
+  <form action="/riders" method="POST">
+    <input type="text" placeholder="first name" name="firstName">
+    <input type="text" placeholder="last name" name="lastName">
+    <input type="number" placeholder="rider number" name="riderNumber">
+    <button type="submit">Submit</button>
+    </form>
+ 
+ <form action="/line" method="POST">
+    <input type="number" placeholder="car number" name="riderNumber">
+    <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
